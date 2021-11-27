@@ -26,12 +26,7 @@ export function getSum(array) {
  * console.log(getMedian(array)); // 4.5
  */
 export function getMedian(array) {
-    array.sort();
-    if (array.length % 2 == 0) {
-        return (array[array.length / 2] + array[(array.length / 2) + 1]) / 2;
-    } else {
-        return array[(array.length + 1) / 2];
-    }
+    return Math.median(array);
 }
 
 /**
@@ -57,10 +52,10 @@ export function getStatistics(array) {
     array.sort();
     let stats = {
         min: array[0],
-        median: getMedian(array),
+        median: Math.median(array),
         max: array[array.length],
         variance: Math.variance(array),
-        mean: getSum(array) / array.length,
+        mean: Math.mean(array),
         length: array.length,
         sum: getSum(array),
         standard_devation: Math.std(array)
