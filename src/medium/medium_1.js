@@ -59,11 +59,11 @@ export function getStatistics(array) {
         min: array[0],
         median: getMedian(array),
         max: array[array.length],
-        variance: Math.variance(array);
+        variance: Math.variance(array),
         mean: getSum(array) / array.length,
         length: array.length,
         sum: getSum(array),
-        standard_devation: Math.std(array);
+        standard_devation: Math.std(array)
 
     };
     return stats;
